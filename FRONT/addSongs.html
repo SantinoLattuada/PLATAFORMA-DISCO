@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Songs</title>
+
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src = "https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+
+    <div class="title">
+        <h1 class="text-8xl text-white">Add Songs</h1>
+    </div>
+    <br><br>
+    <div class="container1">
+        <a id="home" href="#" class="text-xl text-white">Home</a>
+        <a id="addAlbum" href="#" class="text-xl text-white">Add Album</a>
+        <a id="editAlbum" href="#" class="text-xl text-white">Edit Album</a>
+        <a id="addSongs" href="#" class="text-xl text-white">Add Songs</a>
+        <a id="tours" href="#" class="text-xl text-white">Tour dates</a>
+        <a id="logout" href="#" class="text-xl text-white">Log Out</a>
+    </div>
+
+    <br><br>
+    <div class="flex flex-col justify-center items-center">
+        <label class="text-white">CANCION NRO: <input id="numCancion" type="text" class="text-black"></label>
+        <br><br>
+        <label class="text-white">TITLE: <input id="title" type="text" class="text-black"></label>
+        <br><br>
+        <label class="text-white">ARTISTA <input id="artista" type="text" class="text-black"></label>
+        <br><br>
+        <label class="text-white">DURATION <input id="duracion" type="text" class="text-black"></label>
+        <br><br>
+        <label class="text-white">AÑADIR LINK (URL) <input id="url" type="text" class="text-black"></label>
+        <br><br>
+        <div class="inline-flex space-x-4">
+            <button id="botonEdit" class="bg-emerald-400 text-lg px-2">Edit</button>
+            <button id="botonCancel" class="bg-red-700 text-lg px-2">Cancel</button>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
+    <script src="addsongs.js"></script>
+</body>
+</html>

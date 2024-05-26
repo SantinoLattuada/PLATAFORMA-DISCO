@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tours y Fechas</title>
+
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/f96280b9ab.js" crossorigin="anonymous"></script>
+    <script src = " https://unpkg.com/sweetalert/dist/sweetalert.min.js "> </script> 
+</head>
+<body>
+    <div class="container9">
+        <img id="img"><i class="fa-solid fa-ticket fa-2xl"></i></img>
+        <span id="name"></span>
+    </div>
+
+    <div class="title">
+        <h1 class="text-8xl text-white">Tours y Fechas</h1>
+    </div>
+    <br><br>
+    
+    <span id="welcome"></span>
+
+
+    <div class="container1">
+        <a href="index.html" class="text-xl text-white">Home</a>
+        <a href="addAlbum.html" class="text-xl text-white">Add Album</a>
+        <a href="editAlbum.html" class="text-xl text-white">Edit Album</a>
+        <a href="addSongs.html" class="text-xl text-white">Add Songs</a>
+        <a href="Tours.html" class="text-xl text-white">Tour dates</a>
+        <a href="login.html" class="text-xl text-white">Log Out</a>
+    </div>
+
+    <br><br>
+    <div class="flex flex-col justify-center items-center bg-[#379392]" >
+        <ol>
+            <li class="text-white mb-3">1. 10 de abril. Arena VFG Mexico. Conseguí tus tickets acá <button id="evento1" class="text-rose-400"> ARENA VFG</button></li>
+            <li class="text-white mb-3">2. 12 de abril. Monterrey Mexico. Conseguí tus tickets acá <button id="evento2" class="text-rose-400"> MONTERREY</button></li>
+            <li class="text-white mb-3">3. 13 de abril. Mexico City. Conseguí tus tickets acá <button id="evento3" class="text-rose-400">MEXICO CITY</button></li>
+            <li class="text-white mb-3">4. 8 de Junio. Madrid, Bernabeu. Conseguí tus tickets acá <button id="evento4" class="text-rose-400">BERNABEU</button></li>
+        </ol>
+        <img class="borde" src="https://static.eldiario.es/clip/a171b3f9-c5e3-4d0c-9b38-7d47451abaca_16-9-discover-aspect-ratio_default_0.jpg" height="1000px" width="1000px">
+    </div>
+
+    <script src="tours.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--CSS EXTERNO-->
+    <link rel="stylesheet" href="estilos.css">
+
+    <script src = "https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <br>
+    <div class="container1">
+        <a href="index.html" class="text-xl text-white">Home</a>
+        <a href="addAlbum.html" class="text-xl text-white">Add Album</a>
+        <a href="editAlbum.html" class="text-xl text-white">Edit Album</a>
+        <a href="addSongs.html" class="text-xl text-white">Add Songs</a>
+        <a href="Tours.html" class="text-xl text-white">Tour dates</a>
+        <a href="singUp.html" class="text-xl text-white">Register</a>
+    </div>
+    <br><br><br>
+    <div class="flex justify-center items-center bg-[#379392] h-50">
+        <form>
+            <div class="border border-black">
+                <h3 class="flex justify-center text-5xl">Log In</h3>
+                <br><br>
+                <label class="text-5xl">Email: <input id="mail" type="email" placeholder="Ingrese su Email" class="rounded-lg text-5xl" required></label>
+                <br><br>
+                <label class="text-5xl">Contraseña: <input id="contraseña" type="password" placeholder="Ingrese su Contraseña" class="rounded-lg text-5xl" required></label>
+                <br><br>
+                <button id="boton" class="text-5xl bg-[#4F86C6] border border-black px-2 mb-5" type="submit">Sign In</button>
+                <p class="text-xl">¿Aún no sos Miembro?</p>
+                <a class="text-xl" href="singUp.html">Registrate</a>
+            </div>
+        </form>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

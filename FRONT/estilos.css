@@ -1,0 +1,80 @@
+body{
+    background-color: #4FB0C6;
+}
+.description{
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    background-color: #379392;
+    padding: 40px;
+    text-align: left;
+    border-radius: 10px;
+    border:5px solid #4F86C6;
+    margin-bottom: 20px;
+}
+.title{
+    text-align: center;
+}
+.songs{
+    display: flex;
+    justify-content: center;
+    background-color: #379392;
+    border-radius: 10px;
+    border:5px solid #4F86C6;
+    text-align: center;
+}
+button{
+    background-color: #17301C;
+    color: white;
+    padding: 10px;
+    margin: 3px;
+    border-radius: 10px;
+}
+li{
+  font-family: "Noto Sans", sans-serif;
+  font-style: normal;
+}
+img{
+    margin-right: 30px;
+}
+.dukiDescrp{
+    margin-right: 30px;
+}
+.container1{
+    display: flex;
+    justify-content: space-around;
+    background-color: #379392;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.songs{
+    display: flex;
+    justify-content: space-around;
+}
+.borde{
+    border: solid red;
+}
+#welcome{
+    color: white;
+    font-size: 25px;
+}
+#name{
+    color: white;
+    font-size: 25px;
+    display: flex;
+    justify-content: right;
+}
+.container9{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+#img{
+    margin-right: 50px;
+}
+.favorite-icon {
+    margin-right: 0.5px;
+}
+.favorite {
+    color: gold; /* Color del favorito */
+}

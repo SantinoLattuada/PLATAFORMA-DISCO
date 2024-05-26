@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALBUM</title>
+
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+    <div class="title">
+        <!--<h1 class="text-8xl text-white">Super Sangre Joven</h1>-->
+    </div>
+    <br><br>
+    <div class="container1">
+        <a id="home" href="#" class="text-xl text-white">Home</a>
+        <a id="addAlbum" href="#" class="text-xl text-white">Add Album</a>
+        <a id="editAlbum" href="#" class="text-xl text-white">Edit Album</a>
+        <a id="addSongs" href="#" class="text-xl text-white">Add Songs</a>
+        <a id="tours" href="#" class="text-xl text-white">Tour dates</a>
+        <a id="logout" href="#" class="text-xl text-white">Log Out</a>
+    </div>
+
+    <br><br>
+    <div id="view-album" class="flex flex-col justify-center items-center">
+        <!--
+        <img src="https://www.mondosonoro.com/wp-content/uploads/2019/11/duki-disco.jpg" width="250" height="250" alt="">
+        <br>
+        <p class="text-white">Lanzado el 1 noviembre del 2019, Súper Sangre Joven es el álbum debut del rapero argentino Duki. <br> Fue producido mayormente por NEUEN, pero también cuenta con participaciones en la producción de ASAN, Sky Rompiendo y Taxi Dee.</p>
+        <br>
+        <ol>
+            <li class="text-white">1. Te traje Flores</li>
+            <li class="text-white">2. Hitboy</li>
+            <li class="text-white">3. Señorita</li>
+            <li class="text-white">4. Perdón</li>
+        </ol>
+        -->
+    </div>
+    <div class="flex justify-center items-center space-x-4">
+        <button id="boton" class="text-5xl bg-[#4F86C6] border border-black px-2 mb-5 justify-center items-center">Agregar Canciones</button>
+        <button id="boton2" class="text-5xl bg-[#4F86C6] border border-black px-2 mb-5 justify-center items-center">Editar Album</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
+    <script src="./album.js"></script>
+    <script src="https://kit.fontawesome.com/f96280b9ab.js" crossorigin="anonymous"></script>
+</body>
+</html>

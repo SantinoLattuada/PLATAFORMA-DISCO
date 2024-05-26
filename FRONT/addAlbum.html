@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Album</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--CSS EXTERNO-->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <br>
+    <div class="container1">
+        <a href="index.html" class="text-xl text-white">Home</a>
+        <a href="addAlbum.html" class="text-xl text-white">Add Album</a>
+        <a href="editAlbum.html" class="text-xl text-white">Edit Album</a>
+        <a href="addSongs.html" class="text-xl text-white">Add Songs</a>
+        <a href="Tours.html" class="text-xl text-white">Tour dates</a>
+        <a href="login.html" class="text-xl text-white">Log Out</a>
+    </div>
+    <br><br><br>
+    <div class="flex justify-center items-center bg-[#379392] h-50">
+        <form>
+            <div class="border border-black">
+                <h3 class="flex justify-center text-5xl">Nuevo Album</h3>
+                <br><br>
+                <label class="text-5xl">Título: <input id="titulo" type="text" placeholder="Título del album" class="rounded-lg text-5xl"></label>
+                <br><br>
+                <label class="text-5xl">Año lanzamiento: <input id="anio" type="number" placeholder="Año de lanzamiento album" class="rounded-lg text-5xl"></label>
+                <br><br>
+                <label class="text-5xl">Descripción: <input id="descripcion" type="text" placeholder="Descripción" class="rounded-lg text-5xl"></label>
+                <br><br>
+                <label class="text-5xl">Imagen: <input id="imagen" type="url" placeholder="url imagen" class="rounded-lg text-5xl"></label>
+                <br><br>
+                <button id="enviarBtn" class="text-5xl bg-[#4F86C6] border border-black px-2 mb-5" type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
+    <script src="./addAlbum.js"></script>
+</body>
+</html>
