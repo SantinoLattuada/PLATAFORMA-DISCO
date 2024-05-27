@@ -4,6 +4,7 @@ const PORT = 5000;
 const mongoose = require("./conexion");
 const path = require("path");
 const cors = require("cors");
+const dotenv = require("dotenv").config();
 //app.use(bodyParser.urlencoded({extended: true}));
 // Middleware para parsear JSON y datos URL-encoded
 app.use(express.json());
