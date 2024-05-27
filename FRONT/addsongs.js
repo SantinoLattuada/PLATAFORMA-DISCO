@@ -12,22 +12,22 @@ const validateInputs = (titulo, artista) => {
     return true;
 };
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function() {
     const albumId = getAlbumIdFromUrl();
   
     document.getElementById("home").addEventListener("click", function(){
-        window.location.href = 'index.html';
+        window.location.href = "index.html";
     });
   
     document.getElementById("addAlbum").addEventListener("click", function(){
-        window.location.href = 'addAlbum.html';
+        window.location.href = "addAlbum.html";
     });
   
     document.getElementById("editAlbum").addEventListener("click", function(){
         if (albumId) {
             window.location.href = `editAlbum.html?album=${albumId}`;
         } else {
-            window.location.href = 'editAlbum.html';
+            window.location.href = "editAlbum.html";
         }
     });
   

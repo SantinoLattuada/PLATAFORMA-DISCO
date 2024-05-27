@@ -1,31 +1,31 @@
 const getAlbumIdFromUrl = () => {
   const params = new URLSearchParams(window.location.search);
   const albumId = params.get('album');
-  console.log('Album ID from URL:', albumId);  // Verifica el ID del álbum obtenido
+  console.log("Album ID from URL:", albumId);  // Verifica el ID del álbum obtenido
   return albumId;
 };
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function() {
   const albumId = getAlbumIdFromUrl();
   if (albumId) {
     getAlbum(albumId);
   } else {
-    console.error('Album ID is undefined');
+    console.error("Album ID is undefined");
   }
 
   document.getElementById("home").addEventListener("click", function(){
-      window.location.href = 'index.html';
+      window.location.href = "index.html";
   });
 
   document.getElementById("addAlbum").addEventListener("click", function(){
-      window.location.href = 'addAlbum.html';
+      window.location.href = "addAlbum.html";
   });
 
   document.getElementById("editAlbum").addEventListener("click", function(){
       if (albumId) {
           window.location.href = `editAlbum.html?album=${albumId}`;
       } else {
-          window.location.href = 'editAlbum.html';
+          window.location.href = "editAlbum.html";
       }
   });
 
@@ -58,10 +58,10 @@ const getAlbum = async (albumId) => {
   } catch (error) {
     console.log(error);
       swal({
-          title: 'Error!',
+          title: "Error!",
           text: `${error.response.data}`,
-          icon: 'error',
-          confirmButtonText: 'Ok'
+          icon: "error",
+          confirmButtonText: "Ok"
       });
       redirect("./index.html");
   }
@@ -70,21 +70,21 @@ function renderAlbum(album) {
   const div = document.getElementById("view-album");
 
   //Mostrar titulo
-  const h1 = document.createElement('h1');
+  const h1 = document.createElement("h1");
   h1.classList.add('text-white', 'text-5xl', 'mt-20', 'mb-4', 'ml-4', 'font-bold');
   h1.textContent = album.titulo;
   div.appendChild(h1);
 
   //Mostrar Portada de album
-  const img = document.createElement('img')
-  img.src= album.portada ? album.portada : 'https://imgur.com/0uSALUr.png'
-  img.alt = `Portada de ${album.titulo}`;
-  img.style.width = '250px'; // Ajusta el tamaño de la imagen según tus necesidades
-  img.style.height = '250px';
+  const img = document.createElement("img")
+  img.src= album.portada ? album.portada : "https://imgur.com/0uSALUr.png"
+  img.alt = "Portada de ${album.titulo}";
+  img.style.width = "250px"; // Ajusta el tamaño de la imagen según tus necesidades
+  img.style.height = "250px";
   div.appendChild(img);
 
   //Mostrar descripcion
-  const p = document.createElement('p');
+  const p = document.createElement("p");
   p.classList.add('text-white', 'mb-4', 'ml-4', 'w-1/2');
   p.textContent = "Descripción: " + album.descripcion;
   div.appendChild(p);

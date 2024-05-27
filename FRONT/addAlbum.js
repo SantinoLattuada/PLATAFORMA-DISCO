@@ -25,7 +25,7 @@ const anio = document.getElementById("anio");
 const descripcion = document.getElementById("descripcion");
 const imagen = document.getElementById("imagen");
 
-boton.addEventListener('click', async function(e) {
+boton.addEventListener("click", async function(e) {
     e.preventDefault();
     //const albumForm = document.getElementById('albumForm');
     if(!validateInputs(titulo.value, anio.value, descripcion.value)){
@@ -43,20 +43,20 @@ boton.addEventListener('click', async function(e) {
         const albumId = response.data.id;
         if (albumId) {
             swal({
-                title: '¡Álbum Creado!',
-                text: 'Has creado el álbum correctamente.',
-                icon: 'success',
-                confirmButtonText: 'Ok'
+                title: "¡Álbum Creado!",
+                text: "Has creado el álbum correctamente.",
+                icon: "success",
+                confirmButtonText: "Ok"
             })
             .then(() => {
                 window.location.href = `./album.html?album=${albumId}`;
             });
             console.log(response.data);
         } else {
-            console.error('No se recibió el ID del álbum del servidor');
+            console.error("No se recibió el ID del álbum del servidor");
         }
     } catch (error) {
-        console.error('Error al enviar el álbum:', error);
+        console.error("Error al enviar el álbum:", error);
         
     }
     //window.location.reload();
