@@ -1,3 +1,23 @@
+const validateInputs = (titulo, anio, descripcion) => {
+  if (titulo.trim() === '' && descripcion.trim() === '') {
+      swal("Debes completar el título y la descripción", { icon: "error" });
+      return false;
+  } else if (titulo.trim() === '') {
+      swal("Debes completar el título", { icon: "error" });
+      return false;
+  } else if (descripcion.trim() === '') {
+      swal("Debes completar la descripción", { icon: "error" });
+      return false;
+  } else if (anio.trim() === '' || isNaN(anio)) {
+      swal("Debes ingresar un año válido", { icon: "error" });
+      return false;
+  } else if (parseInt(anio) < 2016) {
+      swal("El año debe ser igual o mayor a 2016", { icon: "error" });
+      return false;
+  }
+  return true;
+};
+
 document.addEventListener('DOMContentLoaded', function() {
     const albumId = getAlbumIdFromUrl();
   
@@ -61,25 +81,12 @@ document.addEventListener('DOMContentLoaded', function() {
     };
   };
   
-  const validateInputs = (titulo, descripcion) => {
-    if (titulo.trim() === '' && descripcion.trim() === '') {
-      swal("Debes completar el título y la descripción", { icon: "error" });
-      return false;
-    } else if (titulo.trim() === '') {
-      swal("Debes completar el título", { icon: "error" });
-      return false;
-    } else if (descripcion.trim() === '') {
-      swal("Debes completar la descripción", { icon: "error" });
-      return false;
-    }
-    return true;
-  };
-  
   const loadAlbumDetails = async (albumId) => {
     try {
       const response = await axios.get(`http://localhost:5000/albums/band/${albumId}`);
       const album = response.data;
       document.getElementById('titulo').value = album.titulo;
+      document.getElementById("anio").value = album.anio;
       document.getElementById('descripcion').value = album.descripcion;
       document.getElementById('portada').value = album.portada;
     } catch (error) {
@@ -93,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const albumId = getAlbumIdFromUrl();
     const albumData = getInputValues();
   
-    if (!validateInputs(albumData.titulo, albumData.descripcion)) {
+    if(!validateInputs(titulo.value, anio.value, descripcion.value)){
       return;
     }
   

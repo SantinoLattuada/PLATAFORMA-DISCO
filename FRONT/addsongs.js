@@ -1,3 +1,17 @@
+const validateInputs = (titulo, artista) => {
+    if (titulo.trim() === '' && artista.trim() === '') {
+        swal("Debes completar el título y el artista", { icon: "error" });
+        return false;
+    } else if (titulo.trim() === '') {
+        swal("Debes completar el título", { icon: "error" });
+        return false;
+    } else if (artista.trim() === '') {
+        swal("Debes completar el artista", { icon: "error" });
+        return false;
+    }
+    return true;
+};
+
 document.addEventListener('DOMContentLoaded', function() {
     const albumId = getAlbumIdFromUrl();
   
@@ -67,6 +81,9 @@ const addSong = async () => {
 
     const newSong = { titulo, artista, duracion, youtubeLink, numCancion };
 
+    if(!validateInputs(titulo, artista)){
+        return;
+    }
     try {
         const album = await getAlbum(albumId);
 
