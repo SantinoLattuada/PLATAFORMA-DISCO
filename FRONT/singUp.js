@@ -15,13 +15,18 @@ boton.addEventListener("click", async function(e){
             contrasenia: contrasenia.value 
         });
         console.log(response.data);
-        alert('Usuario registrado con éxito');
-        // Redirigir a la página de inicio de sesión después del registro exitoso
-        window.location.href = "./login.html?";
+        swal({
+            title: 'Usuario registrado con éxito',
+            text: 'Ahora serás redirigido a la página de inicio de sesión',
+            icon: 'success',
+            button: 'Aceptar'
+        }).then(() => {
+            window.location.href = "./login.html";
+        });
     } catch (error) {
         console.error('Error al registrar al usuario:', error);
         alert('Error al registrar el usuario');
     }
-    window.location.reload();
+    //window.location.reload();
     
 })
