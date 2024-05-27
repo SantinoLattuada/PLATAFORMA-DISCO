@@ -31,4 +31,12 @@ boton.addEventListener("click", function(){
     let contraseña = document.getElementById("contraseña").value;
 
     validateInputs(mail, contraseña);
+    swal({
+        title: 'Inicio de sesion completado',
+        text: 'Ahora serás redirigido a la página de inicio de sesión',
+        icon: 'success',
+        button: 'Aceptar'
+    }).then(() => {
+        window.location.href = "./index.html";
+    });
 });
