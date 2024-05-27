@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 const getAlbumIdFromUrl = () => {
   const params = new URLSearchParams(window.location.search);
-  return params.get('album');
+  return params.get("album");
 };
 
 
