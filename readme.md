@@ -17,7 +17,7 @@ A continuación tenemos el paso a paso de cómo descargar el repositorio y levan
 
 2. Crear proyecto: npm init
 
-3. Instalar parquete Nodemon: npm install nodemon
+3. Instalar paquete Nodemon: npm install nodemon
 
 5. Ejecutar servidor: npx nodemon index.js. Para dejar de ejecutar ctrl + C
 

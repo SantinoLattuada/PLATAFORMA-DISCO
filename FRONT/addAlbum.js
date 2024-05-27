@@ -1,3 +1,23 @@
+const validateInputs = (titulo, anio, descripcion) => {
+    if (titulo.trim() === '' && descripcion.trim() === '') {
+        swal("Debes completar el título y la descripción", { icon: "error" });
+        return false;
+    } else if (titulo.trim() === '') {
+        swal("Debes completar el título", { icon: "error" });
+        return false;
+    } else if (descripcion.trim() === '') {
+        swal("Debes completar la descripción", { icon: "error" });
+        return false;
+    } else if (anio.trim() === '' || isNaN(anio)) {
+        swal("Debes ingresar un año válido", { icon: "error" });
+        return false;
+    } else if (parseInt(anio) < 2016) {
+        swal("El año debe ser igual o mayor a 2016", { icon: "error" });
+        return false;
+    }
+    return true;
+};
+
 let boton = document.getElementById("enviarBtn");
 
 const titulo = document.getElementById("titulo");
@@ -8,6 +28,9 @@ const imagen = document.getElementById("imagen");
 boton.addEventListener('click', async function(e) {
     e.preventDefault();
     //const albumForm = document.getElementById('albumForm');
+    if(!validateInputs(titulo.value, anio.value, descripcion.value)){
+        return;
+    }
     try {
         // Envía los datos al backend
         const response = await axios.post("http://localhost:5000/albums/band", {
